@@ -6,18 +6,18 @@ import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const TitleMenu = ({title}) => (
+const TitleMenu = ({title, href}) => (
     <a
-      href="#"
+      href={href}
       className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
     >
       {title}
     </a>
 );
 
-const TitlePanelMenu = ({title}) => (
+const TitlePanelMenu = ({title, href}) => (
   <a
-    href="#"
+    href={href}
     className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
   >
     {title}
@@ -44,10 +44,10 @@ export default function MenuComponent() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  <TitleMenu title="Home"/>
-                  <TitleMenu title="Projects"/>
-                  <TitleMenu title="Papers"/>
-                  <TitleMenu title="Team"/>
+                  <TitleMenu title="Home" href="/"/>
+                  <TitleMenu title="Projects" href="/projects"/>
+                  <TitleMenu title="Papers" href="/papers"/>
+                  <TitleMenu title="Team" href="/team"/>
                 </div>
               </div>
             </div>
@@ -55,10 +55,10 @@ export default function MenuComponent() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="pt-2 pb-4 space-y-1">
-              <TitlePanelMenu title="Home"/>
-              <TitlePanelMenu title="Projects"/>
-              <TitlePanelMenu title="Papers"/>
-              <TitlePanelMenu title="Team"/>
+              <TitlePanelMenu title="Home" href="/"/>
+              <TitlePanelMenu title="Projects" href="/projects"/>
+              <TitlePanelMenu title="Papers" href="/papers"/>
+              <TitlePanelMenu title="Team" href="/team"/>
             </div>
           </Disclosure.Panel>
         </>

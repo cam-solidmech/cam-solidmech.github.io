@@ -5,10 +5,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
 const IndexPage  = ({ data }) => {
-    const image = getImage(data.astronaut);
+  const image = getImage(data.astronaut);
   return (<Layout>
     <article className='prose'>
-        <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
         <GatsbyImage image={image} />
