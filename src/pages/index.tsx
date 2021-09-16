@@ -4,13 +4,17 @@ import Img from 'gatsby-image';
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import Menu from "../components/menu"
 
 const IndexPage  = ({ data }) => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Img className={`float-right mx-8 z-0`} fixed={data.astronaut.childImageSharp.fixed} />
+    <article className='prose'>
+        <Menu/>
+        <h1>Hi people</h1>
+        <p>Welcome to your new Gatsby site.</p>
+        <p>Now go build something great.</p>
+        <Img className={`float-right mx-8 z-0`} fixed={data.astronaut.childImageSharp.fixed} />
+    </article>
   </Layout>
 )
 
