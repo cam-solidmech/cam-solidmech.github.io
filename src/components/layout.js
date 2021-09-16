@@ -10,12 +10,14 @@ import PropTypes from "prop-types"
 
 import Header from "./header"
 import Footer from "./footer"
+import MenuComponent from "./menu"
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
       <div>
+        <MenuComponent/>
         <main>{children}</main>
       <Footer />
       </div>
