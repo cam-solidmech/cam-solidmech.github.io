@@ -1,28 +1,32 @@
 import * as React from "react"
-import { PageProps, Link } from "gatsby"
+import { graphql, PageProps, Link } from "gatsby"
+import Img from 'gatsby-image';
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 
-const IndexPage: React.FC<PageProps<DataProps>>  = () => (
+const IndexPage  = ({ data }) => (
   <Layout>
-    <Seo title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Img className={`float-right mx-8 z-0`} fixed={data.astronaut.childImageSharp.fixed} />
   </Layout>
 )
+
+export const query = graphql`
+  fragment gatsbyImage on File {
+    childImageSharp {
+        fixed(width: 200, height: 200) {
+              ...GatsbyImageSharpFixed
+        }
+      }
+  }
+  query {
+    astronaut: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        ...gatsbyImage
+        }
+  }
+`;
 
 export default IndexPage
