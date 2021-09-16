@@ -1,9 +1,6 @@
 import * as React from "react"
 import { Helmet } from 'react-helmet';
 
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-
 const Header = () => {
  return (
     <>
@@ -15,6 +12,6 @@ const Header = () => {
       </Helmet>
     </>
   );
-}
+};
 
-export default Header
+export default Header;
