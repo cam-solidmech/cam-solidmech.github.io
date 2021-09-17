@@ -6,7 +6,7 @@ import { MailIcon } from '@heroicons/react/outline'
 import Layout from "../components/layout"
 
 const IndexPage  = ({ data }) => {
-  const image = getImage(data.astronaut);
+  const image = getImage(data.vikram);
   return (<Layout>
       <main className="lg:relative">
         <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
@@ -38,9 +38,9 @@ Vikram Deshpande is an engineer who has made significant contributions in fields
           </div>
         </div>
         <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-          <img
+          <GatsbyImage 
             className="absolute inset-0 w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
+            image={image}
             alt=""
           />
         </div>
@@ -57,7 +57,7 @@ export const query = graphql`
       }
   }
   query {
-    astronaut: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+    vikram: file(relativePath: { eq: "picture_Vikram_Deshpande.jpg" }) {
         ...gatsbyImage
         }
   }
