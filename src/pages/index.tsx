@@ -5,6 +5,18 @@ import { MailIcon } from '@heroicons/react/outline'
 
 import Layout from "../components/layout"
 
+
+const ListItem = ({children}) => {
+	return (
+			<li className="py-4 flex">
+			  <div className="ml-3">
+				<p className="text-sm font-medium text-gray-900">{children}</p>
+			  </div>
+			</li>
+    );
+};
+
+
 const IndexPage  = ({ data }) => {
   const image = getImage(data.vikram);
   return (<Layout>
@@ -18,8 +30,15 @@ const IndexPage  = ({ data }) => {
               <span className="block text-indigo-600 xl:inline">Prof. Vikram Sudhir Deshpande (FRS)</span>
             </h2>
             <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-Vikram Deshpande is an engineer who has made significant contributions in fields ranging from the design of micro-architectured materials to modelling soft and active materials. His innovations have helped define the modern frontiers of solid mechanics. Examples of his work include: (i) invention of a new class of architected materials for diverse applications including lightweight structures, energy absorption and shock mitigation; (ii) development of theories to exploit fluid-structure interaction effects to enhance the blast resistance of land and sea vehicles; (iii) creation of computational tools for interrogating the high-temperature performance of alloys used in engines; (iv) unravelling the role of entropic forces in mechano-transduction within living cells and (v) analysing the failure of solid electrolyte lithium ion batteries.
+Vikram Deshpande is an engineer who has made significant contributions in fields ranging from the design of micro-architectured materials to modelling soft and active materials. His innovations have helped define the modern frontiers of solid mechanics. Examples of his work include: 
             </p>
+    <ul role="list" className="divide-y divide-gray-200">
+        <ListItem>Invention of a new class of architected materials for diverse applications including lightweight structures, energy absorption and shock mitigation</ListItem>
+        <ListItem>Development of theories to exploit fluid-structure interaction effects to enhance the blast resistance of land and sea vehicles</ListItem>
+        <ListItem>Creation of computational tools for interrogating the high-temperature performance of alloys used in engines</ListItem>
+        <ListItem>Unravelling the role of entropic forces in mechano-transduction within living cells</ListItem>
+        <ListItem>Analysing the failure of solid electrolyte lithium ion batteries</ListItem>
+    </ul>
             <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
                 <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10" >
