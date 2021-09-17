@@ -45,9 +45,8 @@ export default function MenuComponent() {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   <TitleMenu title="Home" href="/"/>
-                  <TitleMenu title="Projects" href="/projects"/>
-                  <TitleMenu title="Papers" href="/papers"/>
-                  <TitleMenu title="Team" href="/team"/>
+                  <TitleMenu title="Research" href="/research"/>
+                  <TitleMenu title="People" href="/people"/>
                 </div>
               </div>
             </div>
@@ -56,9 +55,8 @@ export default function MenuComponent() {
           <Disclosure.Panel className="sm:hidden">
             <div className="pt-2 pb-4 space-y-1">
               <TitlePanelMenu title="Home" href="/"/>
-              <TitlePanelMenu title="Projects" href="/projects"/>
-              <TitlePanelMenu title="Papers" href="/papers"/>
-              <TitlePanelMenu title="Team" href="/team"/>
+              <TitlePanelMenu title="Research" href="/research"/>
+              <TitlePanelMenu title="People" href="/people"/>
             </div>
           </Disclosure.Panel>
         </>
