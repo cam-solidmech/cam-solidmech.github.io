@@ -16,7 +16,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    { 
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        quality: 100
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,6 +30,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
+        icon: `src/images/gatsby-icon.png`, 
         display: `minimal-ui`
       },
     },
