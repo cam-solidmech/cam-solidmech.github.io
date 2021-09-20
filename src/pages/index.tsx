@@ -1,9 +1,9 @@
 import * as React from "react"
-import { graphql, PageProps, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { PageProps, Link } from "gatsby"
 import { MailIcon } from '@heroicons/react/outline'
 
 import Layout from "../components/layout"
+import picture_Vikram_Deshpande from  "../images/picture_Vikram_Deshpande.jpg"
 
 
 const ListItem = ({children}) => {
@@ -18,7 +18,6 @@ const ListItem = ({children}) => {
 
 
 const IndexPage  = ({ data }) => {
-  const image = getImage(data.vikram);
   return (<Layout>
       <main className="lg:relative">
         <div className="mx-auto max-w-7xl w-full pt-16 text-center lg:text-left">
@@ -57,29 +56,14 @@ Vikram Deshpande is an engineer who has made significant contributions in fields
           </div>
         </div>
         <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-          <GatsbyImage 
+          <img 
             className="absolute inset-0 w-full h-full object-cover"
-            image={image}
+            src={picture_Vikram_Deshpande}
             alt=""
           />
         </div>
       </main>
   </Layout>);
 };
-
-export const query = graphql`
-  fragment gatsbyImage on File {
-    childImageSharp {
-        gatsbyImageData(
-            layout: FULL_WIDTH
-        )
-      }
-  }
-  query {
-    vikram: file(relativePath: { eq: "picture_Vikram_Deshpande.jpg" }) {
-        ...gatsbyImage
-        }
-  }
-`;
 
 export default IndexPage
