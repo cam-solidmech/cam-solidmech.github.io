@@ -78,10 +78,12 @@ export default function Example({data}) {
         <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div className="space-y-5 sm:space-y-4">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Team</h2>
+            {/*
             <p className="text-xl text-gray-500">
               Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum
               vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.
             </p>
+              */}
           </div>
           <div className="lg:col-span-2">
             <ul
