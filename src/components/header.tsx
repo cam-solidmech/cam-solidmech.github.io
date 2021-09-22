@@ -8,7 +8,6 @@ const Header = () => {
         <meta charSet='utf-8' />
         <title>cambrige.com</title>
         <link rel='canonical' href='https://cambrige.com/' />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
       </Helmet>
     </>
   );
