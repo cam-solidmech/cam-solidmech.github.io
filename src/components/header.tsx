@@ -6,8 +6,8 @@ const Header = () => {
     <>
       <Helmet>
         <meta charSet='utf-8' />
-        <title>cambrige.com</title>
-        <link rel='canonical' href='https://cambrige.com/' />
+        <title>Cambridge Solid Mechanics Group</title>
+        <link rel='canonical' href='https://cam-solidmech.github.io/'/>
       </Helmet>
     </>
   );

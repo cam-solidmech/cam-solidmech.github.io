@@ -79,17 +79,17 @@ export default function Example() {
     <div className="bg-white">
       <section aria-labelledby="features-heading" className="max-w-7xl mx-auto sm:px-2 lg:px-8">
         <div className="max-w-2xl mx-auto px-4 lg:px-0 lg:max-w-none">
-			{/*
-          <div className="max-w-3xl">
-            <h2 id="features-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Ongoing Research
+          <div className="pt-8 max-w-3xl">
+            <h2 className="mt-6 text-1xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl">
+              Cambridge Solid Mechanics Group
             </h2>
+			{/*
             <p className="mt-4 text-gray-500">
               The Organize modular system offers endless options for arranging your favorite and most used items. Keep
               everything at reach and in its place, while dressing up your workspace.
             </p>
-          </div>
 			*/}
+          </div>
 
           <Tab.Group as="div" className="mt-4">
             <div className="-mx-4 flex overflow-x-auto sm:mx-0">
