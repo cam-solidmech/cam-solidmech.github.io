@@ -32,7 +32,7 @@ const tabs = [
     ],
   },
   {
-    name: 'Material',
+    name: 'Materials',
     features: [
       {
         name: 'Structural materials under high rate loading',
