@@ -123,11 +123,13 @@ export default function Example() {
                         <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
                         <p className="mt-2 text-sm text-gray-500">{feature.description}</p>
                       </div>
+                        {/*
                       <div className="lg:col-span-7">
                         <div className="aspect-w-2 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2">
                           <img src={feature.imageSrc} alt={feature.imageAlt} className="object-center object-cover" />
                         </div>
                       </div>
+                          */}
                     </div>
                   ))}
                 </Tab.Panel>
