@@ -8,7 +8,7 @@ import picture_Vikram_Deshpande from  "../images/picture_Vikram_Deshpande.jpg"
 
 const ListItem = ({children}) => {
 	return (
-			<li className="py-4 flex">
+			<li className="py-2 flex">
 			  <div className="ml-3">
 				<p className="text-sm font-medium text-gray-900">{children}</p>
 			  </div>
@@ -16,20 +16,19 @@ const ListItem = ({children}) => {
     );
 };
 
-
 const IndexPage  = ({ data }) => {
   return (<Layout>
       <main className="lg:relative">
         <div className="mx-auto max-w-7xl w-full pt-16 text-center lg:text-left">
           <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-            <h2 className="mt-6 text-1xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl">
+            <h2 className="text-1xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl">
               <span className="block xl:inline">Cambridge Solid Mechanics Group</span>
             </h2>
             <h2 className="mt-6 text-1xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl">
               <span className="block text-indigo-600 xl:inline">Prof. Vikram Sudhir Deshpande (FRS)</span>
             </h2>
             <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-Vikram Deshpande is an engineer who has made significant contributions in fields ranging from the design of micro-architectured materials to modelling soft and active materials. His innovations have helped define the modern frontiers of solid mechanics. Examples of his work include: 
+Vikram Deshpande is an engineer who has made significant contributions in fields ranging from the design of micro-architectured materials to modelling soft and active materials. His innovations have helped define the modern frontiers of solid mechanics. 
             </p>
     <ul role="list" className="divide-y divide-gray-200">
         <ListItem>Invention of a new class of architected materials for diverse applications including lightweight structures, energy absorption and shock mitigation</ListItem>
